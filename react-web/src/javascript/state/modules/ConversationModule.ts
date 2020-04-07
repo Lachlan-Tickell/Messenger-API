@@ -1,7 +1,7 @@
 import { observable, action, computed, runInAction } from 'mobx';
 import { createTransformer } from 'mobx-utils';
 
-import * as ajax from "../../Helpers/AjaxHelpers";
+import * as ajax from "../../helpers/AjaxHelpers";
 
 import ConversationClient from '../../api/client/ConversationClient';
 import MessageClient from '../../api/client/MessageClient';
