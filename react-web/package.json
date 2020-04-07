@@ -4,9 +4,6 @@
   "description": "A react tutorial",
   "main": "src/javascript/index.js",
   "scripts": {
-    "server": "webpack-dev-server --open",
-    "server1": "webpack-dev-server --port 4000",
-    "server2": "webpack-dev-server --port 5000",
     "start": "node server.js",
     "heroku-postbuild": "webpack -p"
   },
