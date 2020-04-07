@@ -56,9 +56,11 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
+  host: ec2-3-91-112-166.compute-1.amazonaws.com
+  port: 5432
   adapter: postgresql
   encoding: unicode
-  database: messenger_development_production
+  database: dcbta4d2eeomed
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: sa
-  password: sasa
+  username: bmgqvhalefbisu
+  password: 6fa98be58cbb2db4a31eea51d6b3f85a01343cb1a5aeb2df2a5d1777039b8454
