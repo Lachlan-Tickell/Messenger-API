@@ -14,10 +14,11 @@ import AuthenticationClient from '../../api/client/AuthenticationClient';
 import AuthenticationResponse from '../../api/response/AuthenticationResponse';
 import SocketConnection from '../../api/connections/SocketConnection';
 
-// const API_BASE = "https://messenger-dev-api-v1.herokuapp.com/";
-// const CABLE_BASE = "wss://messenger-dev-api-v1.herokuapp.com/cable";
-const API_BASE = "http://localhost:3000/";
-const CABLE_BASE = "ws://localhost:3000/cable";
+ const API_BASE = "https://messenger-dev-api-v1.herokuapp.com/";
+ const CABLE_BASE = "wss://messenger-dev-api-v1.herokuapp.com/cable";
+
+//const API_BASE = "http://localhost:3000/";
+// const CABLE_BASE = "ws://localhost:3000/cable"; 
 
 export interface IConversationState {
     user: IUser;

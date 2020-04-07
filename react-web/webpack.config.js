@@ -34,7 +34,7 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js", ".html"],
   },
   watch: true,
-  mode: "development",
+  mode: "production",
   plugins: [
     new HtmlWebpackPlugin({
       template: "index.html",
