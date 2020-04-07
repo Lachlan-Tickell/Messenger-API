@@ -2,7 +2,7 @@ const path = require("path")
 //let HtmlWebpackPlugin = require("html-webpack-plugin")
 
 module.exports = {
-  entry: "./src/javascript/index.tsx",
+  entry: "./src/javascript/Index.tsx",
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "./dist"),
