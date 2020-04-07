@@ -12,12 +12,15 @@
 
 ActiveRecord::Schema.define(version: 2020_03_30_185521) do
 
-  create_table "conversations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "conversations", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "conversations_users", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "conversations_users", id: false, force: :cascade do |t|
     t.bigint "conversation_id", null: false
     t.bigint "user_id", null: false
     t.index ["conversation_id", "user_id"], name: "index_conversations_users_on_conversation_id_and_user_id", unique: true
@@ -25,7 +28,7 @@ ActiveRecord::Schema.define(version: 2020_03_30_185521) do
     t.index ["user_id"], name: "index_conversations_users_on_user_id"
   end
 
-  create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "messages", force: :cascade do |t|
     t.string "text"
     t.boolean "sent"
     t.bigint "user_id", null: false
@@ -36,7 +39,7 @@ ActiveRecord::Schema.define(version: 2020_03_30_185521) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
     t.string "email"
