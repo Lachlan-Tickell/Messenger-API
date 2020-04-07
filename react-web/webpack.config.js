@@ -1,5 +1,5 @@
 const path = require("path")
-let HtmlWebpackPlugin = require("html-webpack-plugin")
+//let HtmlWebpackPlugin = require("html-webpack-plugin")
 
 module.exports = {
   entry: "./src/javascript/index.tsx",
@@ -33,11 +33,11 @@ module.exports = {
   resolve: {
     extensions: [".tsx", ".ts", ".js", ".html"],
   },
-  watch: true,
+  //watch: true,
   mode: "production",
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "index.html",
-    }),
-  ],
+  // plugins: [
+  //   new HtmlWebpackPlugin({
+  //     template: "index.html",
+  //   }),
+  // ],
 }
