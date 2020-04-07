@@ -40,14 +40,7 @@ module Web
 
     config.debug_exception_response_format = :api
 
-    config.action_cable.allowed_request_origins = [
-      # Local address of our RoR server
-      'http://localhost:3000',
-      # Local address we use for our React standalone client
-      'http://localhost:8080',
-      'chrome-extension://pfdhoblngboilpfeibdedpjgfnlcodoo'
-  ]
-  ActionCable.server.config.disable_request_forgery_protection = true
+    ActionCable.server.config.disable_request_forgery_protection = true
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
